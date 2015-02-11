@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="nl.scanazon.counterapp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <service
+            android:name="com.octo.android.robospice.Jackson2SpringAndroidSpiceService"
+            android:exported="false" />
+
+        <activity
+            android:name="nl.scanazon.counterapp.scanner.ScanActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter android:label="@string/app_name" >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="nl.scanazon.counterapp.activities.ShoppingListActivity"
+            android:label="@string/title_activity_shopping_list"
+            android:parentActivityName="nl.scanazon.counterapp.activities.ShoppingListPickerActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="nl.scanazon.counterapp.activities.InvoiceActivity"
+            android:label="@string/title_activity_invoice" >
+        </activity>
+    </application>
+
+</manifest>

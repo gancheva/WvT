@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ScanApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="scan_button_description">Scannen</string>
+    <string name="scan_text">Klik de knop om te scannen</string>
+    <string name="title_activity_login">Inloggen</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Wachtwoord</string>
+    <string name="action_sign_in_short">Log in</string>
+    <string name="login_progress_signing_in">Inloggen&#8230;</string>
+    <string name="error_invalid_email">Email kan niet worden gevalideerd</string>
+    <string name="error_invalid_password">Wachtwoord te kort</string>
+    <string name="error_incorrect_password">Incorrect wachtwoord</string>
+    <string name="error_field_required">Verplicht veld</string>
+    <string name="title_activity_base">Basis</string>
+    <string name="title_activity_shopping_list_picker">Boodschappenlijsten</string>
+    <string name="title_activity_shopping_list">Boodschappenlijst</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_qr">Kassa code</string>
+    <string name="pay_button_description">Betalen</string>
+
+</resources>

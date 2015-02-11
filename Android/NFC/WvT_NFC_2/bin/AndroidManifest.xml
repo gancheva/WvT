@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bolmart.wvt.nfc"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="18" />
+    
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    
+    <!-- Note that if your app only uses NFC as an option, but still functions if NFC isn't present, 
+    you should set android:required to false, and test for NFC in code. -->
+    <!--  <uses-feature
+    	android:name="android.hardware.nfc"
+    	android:required="true" /> -->
+    <uses-feature
+    	android:name="android.hardware.nfc"
+    	android:required="false"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.bolmart.wvt.nfc.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.bolmart.wvt.nfc.NFCActivity"
+            android:label="@string/title_activity_nfc" >
+            <!-- Filter for ACTION_NDEF_DISCOVERED intents, declare the intent filter along with the type of data that you want to filter for.-->
+             <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="application/com.bolmart.wvt.nfc" />  
+                <!-- A MIME media type, such as image/jpeg or audio/mpeg4-generic. -->
+    			<!-- <data android:mimeType="text/plain" />  -->
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,57 @@
+/* 
+    Document   : shoppingList
+    Created on : 27-jan-2014, 22:57:20
+    Author     : Joost
+    Description:
+        Purpose of the stylesheet follows.
+*/
+.container {
+    position: relative;
+}
+.left{
+    float: left;
+    width: 30%;
+}
+.right {
+    float: right;
+    width: 70%;
+}
+.shoppingList{
+    border: 1px solid #000;
+    padding: 10px 10px;
+}
+
+.search{
+    height: 80px;
+    border: 1px solid #000;
+}
+
+.categories{
+    border: 1px solid #000;
+    height: 150px;
+    padding: 10px 10px;
+}
+
+.producten{
+    border: 1px solid #000;
+    width: 100%;
+    padding: 10px 10px;
+}
+
+.producten .table-row-left{
+    width: 70%;
+}
+.producten .table-row-middle{
+    width: 30%;
+}
+.producten .table-row-right{
+    width: 25%;
+}
+.producten .table-row-line{
+    border-bottom: 1px solid #999999;
+}
+
+.info{
+    margin-left: 100px;
+    margin-bottom: 20px;
+}

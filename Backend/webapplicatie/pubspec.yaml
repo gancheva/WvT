@@ -1,0 +1,5 @@
+name: WvdT
+description: A sample web application
+dependencies:
+  browser: any
+  polymer: any
